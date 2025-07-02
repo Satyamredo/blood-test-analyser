@@ -1,0 +1,26 @@
+Bug: 1
+But in crewai>=0.130.0, there is no Agent class in the crewai.agents module. 
+The correct class you need to import is likely CrewAgent, 
+or potentially Agent directly from the top-level crewai module or another module according to the latest docs of crewai.
+changed the crew.agent to crewai in agents.py file
+Yes—definitely. Refer to the latest CrewAI docs to see how agents, tasks, and Crews are defined in crewai==0.130.0
+
+
+Bug: 2
+Fix for the Import
+from crewai_tools.tools.serper_dev_tool import SerperDevTool  # ❌ Wrong path
+from crewai_tools import SerperDevTool  # ✅ Correct
+
+
+Bug : 3
+used the temp llm 
+llm = None
+
+
+Bug 4 :
+modifies the pdf loader function
+also modifies the class of the blood_test_report
+
+
+Bug 5 :
+used the local llm api key
