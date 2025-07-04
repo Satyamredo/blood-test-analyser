@@ -22,10 +22,14 @@ pip install -r requirement.txt
 
 I have solved the following bugs in this project:
 
-Bug 1 : updated the requirements.txt into requirementsnew.txt to make the project compatible with the dependecies.
+Bug 1 : requirements.txt -> requirementsnew.txt
+- I have used the uv dependency management rather than pip beause it is faster and easy to use.
+- uv has automatic virtual environment creation on running the project.
+- updated the requirements.txt into requirementsnew.txt to make the project compatible with the dependecies.
 
 Bug 2 : solved the pydantic deprecation 
 - removed the deprecated functions of the pydantic module.
+- added the new pydantic module to make it compatible
 
 Bug 3 : updated the import of crewai.agents module into CrewAgent in the agents.py file
 - To do so, I refered the CrewAI docs and used the AI tools.
@@ -43,3 +47,8 @@ Bug 6 : modifies the PDF loader function
 - to reduce the laency of the post request, modifies the pdf loader function
 - also modifies the class of the blood_test_report
 
+
+## complete working of the project
+- step 1 : Install the uv and requirementsnew.txt
+- step 2 : run the project using the command "uvicorn main:app --reload"
+- step 3 : Test the project on the server "http://127.0.0.1:8000/doc"
